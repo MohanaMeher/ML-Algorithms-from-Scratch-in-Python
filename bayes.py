@@ -127,12 +127,6 @@ def vocab(neg:Sequence[Sequence], pos:Sequence[Sequence]) -> dict:
 
     Sorts the unique words in the vocab alphabetically so we standardize which
     word is associated with which word vector index.
-
-    E.g., given neg = [['hi']] and pos=[['mom']], return:
-
-    V = {'__unknown__':0, 'hi':1, 'mom:2}
-
-    and so |V| is 3
     """
     V = defaultintdict()
     n = set(np.concatenate(neg))
